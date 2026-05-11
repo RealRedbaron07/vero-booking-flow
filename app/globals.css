@@ -1,23 +1,29 @@
 :root {
-  --background: #f6f8f7;
-  --surface: #ffffff;
-  --surface-muted: #edf4f1;
-  --text: #13201c;
-  --muted: #61716b;
-  --border: #d8e1dd;
-  --border-strong: #a8bab3;
-  --primary: #146b5d;
-  --primary-strong: #0f554b;
-  --primary-soft: #dff1ec;
-  --accent: #355f8c;
-  --warning: #8a5d04;
-  --warning-bg: #fff4cf;
-  --success: #146b3c;
-  --success-bg: #ddf4e8;
-  --danger: #a43e3e;
-  --danger-bg: #fde7e7;
-  --shadow: 0 16px 38px rgba(20, 45, 38, 0.07);
-  --shadow-soft: 0 10px 24px rgba(20, 45, 38, 0.06);
+  --background: #f5f2ec;
+  --surface: #fffdfa;
+  --surface-muted: #eef3f0;
+  --surface-subtle: #f8faf7;
+  --text-primary: #17201f;
+  --text-secondary: #62716c;
+  --text: var(--text-primary);
+  --muted: var(--text-secondary);
+  --border: #ded8d0;
+  --border-strong: #b8c6bf;
+  --primary: #0f766e;
+  --primary-strong: #0b5e59;
+  --primary-soft: #e4f2ef;
+  --accent: #2f6384;
+  --accent-dark: #1f4f6b;
+  --accent-soft: #e8f1f4;
+  --warning: #7d5a12;
+  --warning-bg: #fff4d7;
+  --success: #147247;
+  --success-bg: #e2f3e9;
+  --danger: #a44343;
+  --danger-bg: #fae7e4;
+  --shadow: 0 18px 44px rgba(40, 50, 45, 0.07);
+  --shadow-soft: 0 10px 24px rgba(40, 50, 45, 0.05);
+  --shadow-lift: 0 14px 30px rgba(34, 50, 45, 0.08);
 }
 
 html {
@@ -66,14 +72,14 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid rgba(53, 95, 140, 0.3);
+  outline: 3px solid rgba(47, 99, 132, 0.26);
   outline-offset: 2px;
 }
 
 .app-shell {
-  width: min(1060px, calc(100% - 40px));
+  width: min(1080px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 24px 0 52px;
+  padding: 22px 0 50px;
 }
 
 .app-header {
@@ -81,10 +87,10 @@ textarea:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  margin-bottom: 28px;
-  border: 1px solid rgba(216, 225, 221, 0.9);
+  margin-bottom: 26px;
+  border: 1px solid rgba(222, 216, 208, 0.92);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 253, 250, 0.9);
   box-shadow: var(--shadow-soft);
   padding: 12px;
 }
@@ -103,7 +109,7 @@ textarea:focus-visible {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background: var(--primary);
+  background: var(--primary-strong);
   color: #ffffff;
   font-weight: 760;
 }
@@ -129,7 +135,7 @@ textarea:focus-visible {
   gap: 4px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: var(--surface-muted);
+  background: rgba(238, 243, 240, 0.86);
   padding: 4px;
 }
 
@@ -147,13 +153,13 @@ textarea:focus-visible {
 
 .page-nav__link:hover {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 253, 250, 0.78);
 }
 
 .page-nav__link--active {
   background: var(--primary);
   color: #ffffff;
-  box-shadow: 0 5px 14px rgba(20, 107, 93, 0.22);
+  box-shadow: 0 5px 14px rgba(15, 118, 110, 0.2);
 }
 
 .page-nav__link--active:hover {
@@ -163,8 +169,8 @@ textarea:focus-visible {
 
 .page-hero {
   display: grid;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 10px;
+  margin-bottom: 18px;
 }
 
 .page-header {
@@ -173,7 +179,7 @@ textarea:focus-visible {
 
 .page-header h1 {
   margin-top: 8px;
-  font-size: 40px;
+  font-size: 39px;
   line-height: 1.08;
   font-weight: 720;
 }
@@ -190,11 +196,11 @@ textarea:focus-visible {
   max-width: 720px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.68);
+  background: rgba(255, 253, 250, 0.72);
   color: var(--muted);
   font-size: 13px;
   line-height: 1.45;
-  padding: 9px 12px;
+  padding: 8px 11px;
 }
 
 .eyebrow,
@@ -227,6 +233,7 @@ textarea:focus-visible {
   width: fit-content;
   background: var(--primary);
   color: #ffffff;
+  box-shadow: 0 8px 18px rgba(15, 118, 110, 0.16);
 }
 
 .secondary-button {
@@ -236,14 +243,14 @@ textarea:focus-visible {
 }
 
 .danger-button {
-  border: 1px solid #efc4c4;
+  border: 1px solid #e9c5c0;
   background: var(--danger-bg);
   color: var(--danger);
 }
 
 .secondary-button:hover:not(:disabled) {
   border-color: var(--border-strong);
-  background: #f9fbfa;
+  background: var(--surface-subtle);
 }
 
 .primary-button:hover:not(:disabled) {
@@ -251,27 +258,29 @@ textarea:focus-visible {
 }
 
 .primary-button:disabled {
-  background: #b8c8c2;
-  color: rgba(255, 255, 255, 0.9);
+  background: #c7d2cc;
+  color: #f8fbf9;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
 }
 
 .danger-button:hover:not(:disabled) {
   background: #f9d4d4;
 }
 
-.primary-button:disabled,
 .secondary-button:disabled,
 .danger-button:disabled,
 .slot-button:disabled {
   cursor: not-allowed;
-  opacity: 0.58;
+  opacity: 0.66;
 }
 
 .flow-grid {
   display: grid;
-  grid-template-columns: minmax(0, 700px) minmax(280px, 318px);
+  grid-template-columns: minmax(0, 712px) minmax(282px, 320px);
   justify-content: center;
-  gap: 24px;
+  gap: 22px;
   align-items: start;
 }
 
@@ -290,29 +299,31 @@ textarea:focus-visible {
 
 .booking-workflow {
   display: grid;
-  border: 1px solid rgba(216, 225, 221, 0.9);
+  overflow: hidden;
+  border: 1px solid rgba(222, 216, 208, 0.9);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 253, 250, 0.78);
   box-shadow: var(--shadow-soft);
 }
 
 .workflow-section {
-  padding: 24px;
+  position: relative;
+  padding: 25px 24px;
 }
 
 .workflow-section + .workflow-section {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(222, 216, 208, 0.78);
 }
 
 .section-heading {
   display: grid;
-  gap: 5px;
+  gap: 6px;
   margin-bottom: 15px;
 }
 
 .section-heading h2 {
   font-size: 22px;
-  line-height: 1.25;
+  line-height: 1.2;
   font-weight: 700;
 }
 
@@ -323,7 +334,7 @@ textarea:focus-visible {
 .physician-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 13px;
 }
 
 .physician-card {
@@ -335,7 +346,7 @@ textarea:focus-visible {
   padding: 18px 18px 46px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #fbfdfc;
+  background: rgba(255, 253, 250, 0.9);
   color: var(--text);
   text-align: left;
   transition:
@@ -348,15 +359,15 @@ textarea:focus-visible {
 .physician-card:hover {
   border-color: var(--border-strong);
   background: #ffffff;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-lift);
   transform: translateY(-1px);
 }
 
 .physician-card--selected {
   border-color: var(--primary);
-  background: #f2fbf8;
+  background: var(--primary-soft);
   box-shadow:
-    inset 0 0 0 1px var(--primary),
+    inset 0 0 0 1px rgba(15, 118, 110, 0.52),
     var(--shadow-soft);
 }
 
@@ -379,7 +390,7 @@ textarea:focus-visible {
 
 .physician-card__specialty {
   margin-top: 5px;
-  color: var(--accent);
+  color: var(--accent-dark);
   font-size: 14px;
   font-weight: 680;
 }
@@ -390,7 +401,7 @@ textarea:focus-visible {
   bottom: 18px;
   height: fit-content;
   border-radius: 999px;
-  background: var(--surface);
+  background: rgba(255, 253, 250, 0.84);
   color: var(--primary);
   font-size: 12px;
   font-weight: 720;
@@ -407,7 +418,7 @@ textarea:focus-visible {
   width: fit-content;
   max-width: 100%;
   border-radius: 999px;
-  background: var(--surface-muted);
+  background: rgba(232, 241, 244, 0.8);
   color: var(--muted);
   font-size: 14px;
   font-weight: 650;
@@ -424,7 +435,7 @@ textarea:focus-visible {
 .slot-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  gap: 11px;
 }
 
 .slot-button {
@@ -434,7 +445,7 @@ textarea:focus-visible {
   padding: 15px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #fbfdfc;
+  background: rgba(255, 253, 250, 0.9);
   color: var(--text);
   text-align: left;
   transition:
@@ -463,13 +474,26 @@ textarea:focus-visible {
 .slot-button--selected {
   border-color: var(--primary);
   background: var(--primary-soft);
-  box-shadow: inset 0 0 0 1px var(--primary);
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.54);
+}
+
+.slot-button:disabled {
+  border-style: dashed;
+  background: #f1f2ed;
+  color: var(--muted);
+  opacity: 1;
+}
+
+.slot-button:disabled strong,
+.slot-button:disabled span,
+.slot-button:disabled small {
+  color: #7b8882;
 }
 
 .booking-form {
   display: grid;
-  max-width: 640px;
-  gap: 17px;
+  max-width: 630px;
+  gap: 16px;
 }
 
 .field-grid {
@@ -499,7 +523,7 @@ textarea:focus-visible {
   width: 100%;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #ffffff;
+  background: rgba(255, 253, 250, 0.94);
   color: var(--text);
   padding: 12px 13px;
   transition:
@@ -519,7 +543,8 @@ textarea:focus-visible {
 .field-group input:focus,
 .field-group textarea:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(20, 107, 93, 0.12);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
 }
 
 .field-error {
@@ -537,11 +562,12 @@ textarea:focus-visible {
 
 .sidebar {
   position: sticky;
-  top: 24px;
+  top: 22px;
 }
 
 .summary-card {
-  border-color: rgba(216, 225, 221, 0.95);
+  border-color: rgba(222, 216, 208, 0.92);
+  background: rgba(255, 253, 250, 0.86);
   padding: 20px;
   box-shadow: var(--shadow-soft);
 }
@@ -554,7 +580,7 @@ textarea:focus-visible {
 }
 
 .summary-card--muted {
-  background: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 253, 250, 0.8);
   color: var(--muted);
 }
 
@@ -589,7 +615,7 @@ textarea:focus-visible {
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: var(--primary);
+  background: var(--accent);
   content: "";
 }
 
@@ -649,11 +675,11 @@ textarea:focus-visible {
 }
 
 .empty-state {
-  border: 1px dashed var(--border-strong);
+  border: 1px dashed rgba(184, 198, 191, 0.9);
   border-radius: 8px;
-  background: rgba(251, 253, 252, 0.72);
+  background: rgba(248, 250, 247, 0.78);
   color: var(--muted);
-  padding: 22px;
+  padding: 21px;
   line-height: 1.55;
 }
 
@@ -669,6 +695,8 @@ textarea:focus-visible {
 }
 
 .metric-card {
+  background: rgba(255, 253, 250, 0.88);
+  box-shadow: var(--shadow-soft);
   padding: 18px;
 }
 
@@ -699,7 +727,7 @@ textarea:focus-visible {
 .booking-table th,
 .booking-table td {
   border-bottom: 1px solid var(--border);
-  padding: 16px 12px;
+  padding: 15px 12px;
   text-align: left;
   vertical-align: top;
 }
@@ -735,7 +763,7 @@ textarea:focus-visible {
 
 @media (max-width: 980px) {
   .app-shell {
-    width: min(100% - 32px, 1060px);
+    width: min(100% - 32px, 1080px);
   }
 
   .flow-grid {
@@ -758,7 +786,7 @@ textarea:focus-visible {
 
 @media (max-width: 760px) {
   .app-shell {
-    width: min(100% - 24px, 1060px);
+    width: min(100% - 24px, 1080px);
     padding: 16px 0 40px;
   }
 
@@ -795,7 +823,7 @@ textarea:focus-visible {
   }
 
   .workflow-section {
-    padding: 20px 18px;
+    padding: 20px 17px;
   }
 
   .field-grid,
