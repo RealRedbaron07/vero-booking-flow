@@ -1,33 +1,35 @@
 :root {
-  --background: #f6f8fb;
-  --surface: #ffffff;
-  --surface-muted: #f1f5f9;
-  --surface-subtle: #f8fafc;
-  --text-primary: #0f172a;
-  --text-secondary: #64748b;
+  --background: #efe8dc;
+  --surface: #f8f3ea;
+  --surface-muted: #e7ded0;
+  --surface-subtle: #ebe2d5;
+  --text-primary: #1e1b16;
+  --text-secondary: #6f675b;
   --text: var(--text-primary);
   --muted: var(--text-secondary);
-  --border: #e2e8f0;
-  --border-strong: #cbd5e1;
-  --accent: #0e7490;
-  --accent-hover: #155e75;
-  --accent-soft: #e0f2fe;
+  --border: #d3c7b6;
+  --border-strong: #9f907b;
+  --accent: #9a4f32;
+  --accent-hover: #783b27;
+  --accent-soft: #e2d1bf;
   --primary: var(--accent);
   --primary-strong: var(--accent-hover);
   --primary-soft: var(--accent-soft);
-  --accent-dark: #164e63;
-  --warning: #92400e;
-  --warning-soft: #fef3c7;
+  --accent-dark: #5f3b28;
+  --warning: #7a5a12;
+  --warning-soft: #ead9a6;
   --warning-bg: var(--warning-soft);
-  --success: #0f766e;
-  --success-soft: #ccfbf1;
+  --success: #4f633f;
+  --success-soft: #d8dfc8;
   --success-bg: var(--success-soft);
-  --danger: #b42318;
-  --danger-soft: #fee4e2;
+  --danger: #8d3329;
+  --danger-soft: #ead1ca;
   --danger-bg: var(--danger-soft);
-  --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-  --shadow-soft: 0 10px 28px rgba(15, 23, 42, 0.06);
-  --shadow-lift: 0 18px 36px rgba(15, 23, 42, 0.1);
+  --earth-blue: #2f4f5f;
+  --ochre: #b48832;
+  --shadow: none;
+  --shadow-soft: none;
+  --shadow-lift: none;
 }
 
 html {
@@ -76,14 +78,14 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid rgba(14, 116, 144, 0.24);
+  outline: 3px solid rgba(154, 79, 50, 0.25);
   outline-offset: 2px;
 }
 
 .app-shell {
-  width: min(1120px, calc(100% - 40px));
+  width: min(1080px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 24px 0 52px;
+  padding: 20px 0 44px;
 }
 
 .app-header {
@@ -91,12 +93,11 @@ textarea:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  margin-bottom: 30px;
-  border: 1px solid rgba(226, 232, 240, 0.88);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: var(--shadow-soft);
-  padding: 13px 14px;
+  margin-bottom: 34px;
+  border-bottom: 2px solid var(--text-primary);
+  background: transparent;
+  box-shadow: none;
+  padding: 0 0 14px;
 }
 
 .app-brand {
@@ -112,11 +113,11 @@ textarea:focus-visible {
   height: 36px;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  background: #0f172a;
+  border-radius: 0;
+  background: var(--accent);
   color: #ffffff;
   font-weight: 760;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.16);
+  box-shadow: none;
 }
 
 .app-brand strong,
@@ -138,11 +139,11 @@ textarea:focus-visible {
 
 .page-nav {
   display: inline-flex;
-  gap: 4px;
-  border: 1px solid rgba(226, 232, 240, 0.92);
-  border-radius: 8px;
-  background: #f8fafc;
-  padding: 4px;
+  gap: 0;
+  border: 1px solid var(--text-primary);
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .page-nav__link {
@@ -150,37 +151,36 @@ textarea:focus-visible {
   min-height: 36px;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
+  border-radius: 0;
   color: var(--muted);
   font-size: 14px;
   font-weight: 680;
-  padding: 0 14px;
+  padding: 0 16px;
   transition:
     background-color 160ms ease,
-    color 160ms ease,
-    box-shadow 160ms ease;
+    color 160ms ease;
 }
 
 .page-nav__link:hover {
   color: var(--text);
-  background: #ffffff;
+  background: var(--surface-subtle);
 }
 
 .page-nav__link--active {
-  background: var(--accent);
-  color: #ffffff;
-  box-shadow: 0 8px 18px rgba(14, 116, 144, 0.22);
+  background: var(--text-primary);
+  color: var(--background);
+  box-shadow: none;
 }
 
 .page-nav__link--active:hover {
-  color: #ffffff;
-  background: var(--accent-hover);
+  color: var(--background);
+  background: var(--text-primary);
 }
 
 .page-hero {
   display: grid;
-  gap: 12px;
-  margin-bottom: 22px;
+  gap: 11px;
+  margin-bottom: 24px;
 }
 
 .page-header {
@@ -190,9 +190,9 @@ textarea:focus-visible {
 .page-header h1 {
   margin-top: 8px;
   color: var(--text-primary);
-  font-size: 42px;
+  font-size: 43px;
   line-height: 1.05;
-  font-weight: 760;
+  font-weight: 780;
 }
 
 .page-header p:not(.eyebrow) {
@@ -205,18 +205,19 @@ textarea:focus-visible {
 .demo-note {
   width: fit-content;
   max-width: 720px;
-  border: 1px solid rgba(203, 213, 225, 0.72);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.72);
+  border: 0;
+  border-left: 4px solid var(--ochre);
+  border-radius: 0;
+  background: transparent;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.45;
-  padding: 8px 12px;
+  padding: 4px 0 4px 12px;
 }
 
 .eyebrow,
 .step-label {
-  color: var(--accent);
+  color: var(--accent-hover);
   font-size: 12px;
   font-weight: 760;
   letter-spacing: 0;
@@ -230,23 +231,21 @@ textarea:focus-visible {
   min-height: 42px;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 0 16px;
   font-weight: 680;
   cursor: pointer;
   transition:
     background-color 160ms ease,
     border-color 160ms ease,
-    color 160ms ease,
-    box-shadow 160ms ease,
-    transform 160ms ease;
+    color 160ms ease;
 }
 
 .primary-button {
   width: fit-content;
   background: var(--accent);
   color: #ffffff;
-  box-shadow: 0 10px 22px rgba(14, 116, 144, 0.2);
+  box-shadow: none;
 }
 
 .secondary-button {
@@ -256,7 +255,7 @@ textarea:focus-visible {
 }
 
 .danger-button {
-  border: 1px solid #fecaca;
+  border: 1px solid #c79b90;
   background: var(--danger-bg);
   color: var(--danger);
 }
@@ -268,19 +267,18 @@ textarea:focus-visible {
 
 .primary-button:hover:not(:disabled) {
   background: var(--accent-hover);
-  transform: translateY(-1px);
 }
 
 .primary-button:disabled {
-  background: #cbd5e1;
-  color: #f8fafc;
+  background: #c9c0af;
+  color: #f7f2e8;
   box-shadow: none;
   cursor: not-allowed;
   opacity: 1;
 }
 
 .danger-button:hover:not(:disabled) {
-  background: #fecaca;
+  background: #ddbab1;
 }
 
 .secondary-button:disabled,
@@ -292,47 +290,48 @@ textarea:focus-visible {
 
 .flow-grid {
   display: grid;
-  grid-template-columns: minmax(0, 730px) minmax(292px, 328px);
+  grid-template-columns: minmax(0, 720px) minmax(270px, 310px);
   justify-content: center;
-  gap: 24px;
+  gap: 38px;
   align-items: start;
 }
 
 .panel,
 .summary-card,
 .metric-card {
-  border: 1px solid rgba(226, 232, 240, 0.86);
-  border-radius: 8px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .panel {
-  padding: 24px;
+  padding: 0;
 }
 
 .booking-workflow {
   display: grid;
-  overflow: hidden;
-  border: 1px solid rgba(226, 232, 240, 0.86);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: var(--shadow);
+  overflow: visible;
+  border: 0;
+  border-top: 2px solid var(--text-primary);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .workflow-section {
   position: relative;
-  padding: 28px 26px;
+  padding: 24px 0;
 }
 
 .workflow-section + .workflow-section {
-  border-top: 1px solid rgba(226, 232, 240, 0.88);
+  border-top: 1px solid var(--border);
 }
 
 .section-heading {
   display: grid;
   gap: 7px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .section-heading h2 {
@@ -348,47 +347,48 @@ textarea:focus-visible {
 
 .physician-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(212px, 1fr));
+  gap: 20px;
 }
 
 .physician-card {
   position: relative;
   display: grid;
   align-content: start;
-  gap: 12px;
-  min-height: 216px;
-  padding: 20px 18px 48px;
-  border: 1px solid rgba(226, 232, 240, 0.98);
-  border-radius: 8px;
-  background: #ffffff;
+  gap: 11px;
+  min-height: 198px;
+  padding: 0 8px 42px 0;
+  border: 0;
+  border-left: 4px solid var(--border);
+  border-radius: 0;
+  background: transparent;
   color: var(--text);
   text-align: left;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.035);
+  box-shadow: none;
   transition:
-    background-color 160ms ease,
     border-color 160ms ease,
-    box-shadow 160ms ease,
-    transform 160ms ease;
+    color 160ms ease;
 }
 
 .physician-card:hover {
-  border-color: rgba(14, 116, 144, 0.4);
-  background: #ffffff;
-  box-shadow: var(--shadow-lift);
-  transform: translateY(-1px);
+  border-color: var(--ochre);
+  background: transparent;
 }
 
 .physician-card--selected {
-  border-color: rgba(14, 116, 144, 0.72);
-  background: var(--primary-soft);
-  box-shadow:
-    inset 0 0 0 1px rgba(14, 116, 144, 0.28),
-    var(--shadow-lift);
+  border-color: var(--accent);
+  background: transparent;
+  box-shadow: none;
+}
+
+.physician-card--selected .physician-card__name,
+.physician-card--selected .physician-card__specialty {
+  color: var(--accent-hover);
 }
 
 .physician-card__header {
   display: block;
+  padding-left: 12px;
 }
 
 .physician-card__name,
@@ -413,20 +413,21 @@ textarea:focus-visible {
 
 .physician-card__check {
   position: absolute;
-  right: 18px;
-  bottom: 18px;
+  right: 0;
+  bottom: 0;
   height: fit-content;
-  border-radius: 999px;
-  border: 1px solid rgba(14, 116, 144, 0.12);
-  background: #f0f9ff;
-  color: var(--accent-hover);
+  border-radius: 0;
+  border: 1px solid var(--text-primary);
+  background: transparent;
+  color: var(--text-primary);
   font-size: 12px;
   font-weight: 720;
-  padding: 5px 9px;
+  padding: 5px 10px;
+  text-transform: uppercase;
 }
 
 .physician-card--selected .physician-card__check {
-  border-color: transparent;
+  border-color: var(--accent);
   background: var(--accent);
   color: #ffffff;
 }
@@ -435,16 +436,19 @@ textarea:focus-visible {
   display: inline-flex;
   width: fit-content;
   max-width: 100%;
-  border-radius: 999px;
-  background: #f1f5f9;
-  color: #475569;
+  margin-left: 12px;
+  border-left: 2px solid var(--ochre);
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
   font-size: 14px;
   font-weight: 650;
-  padding: 5px 9px;
+  padding: 0 0 0 8px;
   white-space: nowrap;
 }
 
 .physician-card__description {
+  padding-left: 12px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.58;
@@ -453,25 +457,23 @@ textarea:focus-visible {
 .slot-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 11px;
 }
 
 .slot-button {
   display: grid;
   gap: 7px;
-  min-height: 104px;
-  padding: 15px 14px;
-  border: 1px solid rgba(226, 232, 240, 0.98);
-  border-radius: 8px;
-  background: #ffffff;
+  min-height: 98px;
+  padding: 13px 12px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
   color: var(--text);
   text-align: left;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+  box-shadow: none;
   transition:
     background-color 160ms ease,
-    border-color 160ms ease,
-    box-shadow 160ms ease,
-    transform 160ms ease;
+    border-color 160ms ease;
 }
 
 .slot-button span,
@@ -486,23 +488,19 @@ textarea:focus-visible {
 }
 
 .slot-button:hover:not(:disabled) {
-  border-color: rgba(14, 116, 144, 0.38);
-  background: #ffffff;
-  box-shadow: var(--shadow-soft);
-  transform: translateY(-1px);
+  border-color: var(--text-primary);
+  background: rgba(247, 242, 232, 0.72);
 }
 
 .slot-button--selected {
-  border-color: rgba(14, 116, 144, 0.76);
-  background: var(--primary-soft);
-  box-shadow:
-    inset 0 0 0 1px rgba(14, 116, 144, 0.3),
-    0 10px 24px rgba(14, 116, 144, 0.12);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: none;
 }
 
 .slot-button:disabled {
   border-style: dashed;
-  background: #f1f5f9;
+  background: rgba(230, 221, 207, 0.5);
   color: var(--muted);
   opacity: 1;
 }
@@ -510,7 +508,7 @@ textarea:focus-visible {
 .slot-button:disabled strong,
 .slot-button:disabled span,
 .slot-button:disabled small {
-  color: #94a3b8;
+  color: #8a8173;
 }
 
 .booking-form {
@@ -544,19 +542,19 @@ textarea:focus-visible {
 .field-group input,
 .field-group textarea {
   width: 100%;
-  border: 1px solid rgba(203, 213, 225, 0.86);
-  border-radius: 8px;
-  background: #ffffff;
+  border: 0;
+  border-bottom: 2px solid var(--border);
+  border-radius: 0;
+  background: transparent;
   color: var(--text);
-  padding: 12px 14px;
+  padding: 10px 0;
   transition:
     background-color 160ms ease,
-    border-color 160ms ease,
-    box-shadow 160ms ease;
+    border-color 160ms ease;
 }
 
 .field-group textarea {
-  min-height: 116px;
+  min-height: 104px;
   resize: vertical;
 }
 
@@ -568,8 +566,8 @@ textarea:focus-visible {
 .field-group input:focus,
 .field-group textarea:focus {
   border-color: var(--accent);
-  background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.13);
+  background: transparent;
+  box-shadow: none;
 }
 
 .field-error {
@@ -587,14 +585,14 @@ textarea:focus-visible {
 
 .sidebar {
   position: sticky;
-  top: 24px;
+  top: 22px;
 }
 
 .summary-card {
-  border-color: rgba(226, 232, 240, 0.86);
-  background: rgba(255, 255, 255, 0.94);
-  padding: 22px;
-  box-shadow: var(--shadow);
+  border-left: 2px solid var(--text-primary);
+  background: transparent;
+  padding: 0 0 0 22px;
+  box-shadow: none;
 }
 
 .summary-card__header {
@@ -605,7 +603,7 @@ textarea:focus-visible {
 }
 
 .summary-card--muted {
-  background: rgba(255, 255, 255, 0.92);
+  background: transparent;
   color: var(--muted);
 }
 
@@ -639,10 +637,10 @@ textarea:focus-visible {
   left: 0;
   width: 10px;
   height: 10px;
-  border-radius: 999px;
-  border: 2px solid #ffffff;
-  background: var(--accent);
-  box-shadow: 0 0 0 1px rgba(14, 116, 144, 0.26);
+  border-radius: 0;
+  border: 0;
+  background: var(--ochre);
+  box-shadow: none;
   content: "";
 }
 
@@ -681,7 +679,7 @@ textarea:focus-visible {
   display: inline-flex;
   align-items: center;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: 0;
   padding: 5px 10px;
   font-size: 12px;
   font-weight: 760;
@@ -690,25 +688,25 @@ textarea:focus-visible {
 .status-badge--pending {
   background: var(--warning-bg);
   color: var(--warning);
-  border-color: #fde68a;
+  border-color: #c6a447;
 }
 
 .status-badge--confirmed {
   background: var(--success-bg);
   color: var(--success);
-  border-color: #99f6e4;
+  border-color: #9faf79;
 }
 
 .status-badge--cancelled {
   background: var(--danger-bg);
   color: var(--danger);
-  border-color: #fecaca;
+  border-color: #caa199;
 }
 
 .empty-state {
-  border: 1px dashed rgba(148, 163, 184, 0.72);
-  border-radius: 8px;
-  background: #f8fafc;
+  border: 1px dashed var(--border-strong);
+  border-radius: 0;
+  background: transparent;
   color: var(--muted);
   padding: 22px;
   line-height: 1.55;
@@ -721,24 +719,21 @@ textarea:focus-visible {
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-bottom: 18px;
+  gap: 22px;
+  margin-bottom: 22px;
 }
 
 .metric-card {
   position: relative;
   overflow: hidden;
-  background: #ffffff;
-  box-shadow: var(--shadow-soft);
-  padding: 20px;
+  background: transparent;
+  box-shadow: none;
+  padding: 16px 0 18px;
+  border-top: 2px solid var(--text-primary);
 }
 
 .metric-card::before {
-  position: absolute;
-  inset: 0 0 auto;
-  height: 3px;
-  background: var(--accent);
-  content: "";
+  content: none;
 }
 
 .metric-card span {
@@ -758,8 +753,9 @@ textarea:focus-visible {
 
 .table-shell {
   overflow-x: auto;
-  border: 1px solid rgba(226, 232, 240, 0.86);
-  border-radius: 8px;
+  border: 0;
+  border-top: 2px solid var(--text-primary);
+  border-radius: 0;
 }
 
 .booking-table {
@@ -767,7 +763,7 @@ textarea:focus-visible {
   min-width: 940px;
   border-collapse: separate;
   border-spacing: 0;
-  background: #ffffff;
+  background: transparent;
 }
 
 .booking-table th,
@@ -779,7 +775,7 @@ textarea:focus-visible {
 }
 
 .booking-table th {
-  background: #f8fafc;
+  background: transparent;
   color: var(--muted);
   font-size: 12px;
   font-weight: 760;
@@ -793,7 +789,7 @@ textarea:focus-visible {
 }
 
 .booking-table tbody tr:hover td {
-  background: #fbfdff;
+  background: var(--surface-subtle);
 }
 
 .booking-table tbody tr:last-child td {
@@ -818,7 +814,7 @@ textarea:focus-visible {
 
 @media (max-width: 980px) {
   .app-shell {
-    width: min(100% - 32px, 1080px);
+    width: min(100% - 32px, 1040px);
   }
 
   .flow-grid {
@@ -874,11 +870,11 @@ textarea:focus-visible {
   }
 
   .panel {
-    padding: 18px;
+    padding: 0;
   }
 
   .workflow-section {
-    padding: 20px 17px;
+    padding: 22px 0;
   }
 
   .field-grid,
@@ -910,7 +906,7 @@ textarea:focus-visible {
 
   .booking-table tr {
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 0;
     padding: 10px 12px;
   }
 
