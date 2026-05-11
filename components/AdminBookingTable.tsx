@@ -49,7 +49,9 @@ export function AdminBookingTable({
                 <td data-label="Patient">
                   <strong>{booking.patientName}</strong>
                   <span>{booking.patientEmail}</span>
-                  {booking.patientPhone ? <span>{booking.patientPhone}</span> : null}
+                  {booking.patientPhone ? (
+                    <span>{booking.patientPhone}</span>
+                  ) : null}
                 </td>
                 <td data-label="Physician">{physician?.name ?? "Unknown"}</td>
                 <td data-label="Appointment">
@@ -59,7 +61,9 @@ export function AdminBookingTable({
                 <td data-label="Status">
                   <StatusBadge status={booking.status} />
                 </td>
-                <td data-label="Created">{formatCreatedAt(booking.createdAt)}</td>
+                <td data-label="Created">
+                  {formatCreatedAt(booking.createdAt)}
+                </td>
                 <td data-label="Actions">
                   <div className="table-actions">
                     <button

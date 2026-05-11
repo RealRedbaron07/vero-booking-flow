@@ -12,10 +12,16 @@ export function BookingSummary({ booking }: BookingSummaryProps) {
 
   return (
     <section className="summary-card" aria-live="polite">
-      <div className="section-heading section-heading--compact">
-        <p className="eyebrow">Request received</p>
-        <h2>Appointment Summary</h2>
+      <div className="summary-card__header">
+        <div className="section-heading section-heading--compact">
+          <p className="eyebrow">Request received</p>
+          <h2>Appointment summary</h2>
+        </div>
+        <StatusBadge status={booking.status} />
       </div>
+      <p className="summary-lead">
+        This request is saved locally and awaiting clinic review.
+      </p>
       <dl className="summary-list">
         <div>
           <dt>Patient</dt>
@@ -29,15 +35,9 @@ export function BookingSummary({ booking }: BookingSummaryProps) {
           <dt>Appointment</dt>
           <dd>{formatAppointmentDateTime(booking.appointmentTime)}</dd>
         </div>
-        <div>
-          <dt>Status</dt>
-          <dd>
-            <StatusBadge status={booking.status} />
-          </dd>
-        </div>
       </dl>
       <p className="summary-note">
-        This request is awaiting confirmation from the clinic team.
+        The admin view can confirm or cancel this appointment request.
       </p>
     </section>
   );

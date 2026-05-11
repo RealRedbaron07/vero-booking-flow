@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import {
   addBooking,
@@ -11,6 +10,7 @@ import {
 } from "@/lib/bookingStorage";
 import { physicians } from "@/lib/mockData";
 import type { Booking } from "@/lib/types";
+import { AppHeader } from "./AppHeader";
 import {
   BookingForm,
   type BookingFormErrors,
@@ -137,19 +137,22 @@ export function PatientBookingFlow() {
 
   return (
     <main className="app-shell">
-      <header className="page-header">
-        <div>
-          <p className="eyebrow">Vero work sample</p>
+      <AppHeader currentPage="patient" />
+
+      <section className="page-hero">
+        <div className="page-header">
+          <p className="eyebrow">Patient booking</p>
           <h1>Book an Appointment</h1>
           <p>
             Request a visit with an available physician. The clinic can confirm
             or cancel the request from the admin view.
           </p>
         </div>
-        <Link className="nav-link" href="/admin">
-          Admin view
-        </Link>
-      </header>
+        <p className="demo-note">
+          Demo data only: mock availability and browser localStorage. No real
+          patient data is collected.
+        </p>
+      </section>
 
       <div className="flow-grid">
         <div className="flow-stack">
@@ -221,11 +224,19 @@ export function PatientBookingFlow() {
             <section className="summary-card summary-card--muted">
               <div className="section-heading section-heading--compact">
                 <p className="eyebrow">Booking request</p>
-                <h2>Pending review after submission</h2>
+                <h2>Ready when submitted</h2>
               </div>
-              <p>
+              <p className="summary-lead">
+                Your request summary will appear here after submission.
+              </p>
+              <ul className="summary-checklist">
+                <li>Choose a physician</li>
+                <li>Select an available time</li>
+                <li>Submit patient details</li>
+              </ul>
+              <p className="summary-note">
                 Submitted requests are saved locally and appear in the admin
-                view for status updates.
+                view for confirmation or cancellation.
               </p>
             </section>
           )}

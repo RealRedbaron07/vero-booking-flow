@@ -29,7 +29,7 @@ export function PhysicianCard({
           {isSelected ? "Selected" : "Choose"}
         </span>
       </span>
-      <span className="physician-card__location">{physician.location}</span>
+      <span className="physician-card__meta">{physician.location}</span>
       <span className="physician-card__description">
         {physician.description}
       </span>

@@ -3,11 +3,11 @@ import type { Physician } from "./types";
 export const physicians: Physician[] = [
   {
     id: "emily-chen",
-    name: "Dr. Emily Chen",
+    name: "Dr. Maya Roberts",
     specialty: "Family Medicine",
     location: "Toronto Clinic",
     description:
-      "Primary care for adults and families, including preventive visits and new concerns.",
+      "Comprehensive primary care for adults and families, including preventive visits and new concerns.",
     availability: [
       {
         id: "emily-chen-2026-05-14-0900",
@@ -33,11 +33,11 @@ export const physicians: Physician[] = [
   },
   {
     id: "arjun-patel",
-    name: "Dr. Arjun Patel",
+    name: "Dr. Daniel Lee",
     specialty: "Internal Medicine",
     location: "Downtown Care Centre",
     description:
-      "Complex adult care, chronic condition follow-up, and medication reviews.",
+      "Adult medicine support for chronic condition follow-up, complex concerns, and medication reviews.",
     availability: [
       {
         id: "arjun-patel-2026-05-14-1130",
@@ -63,7 +63,7 @@ export const physicians: Physician[] = [
   },
   {
     id: "sarah-roberts",
-    name: "Dr. Sarah Roberts",
+    name: "Dr. Sofia Martin",
     specialty: "Pediatrics",
     location: "North York Clinic",
     description:

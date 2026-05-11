@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useSyncExternalStore } from "react";
 import {
   getBookingsSnapshot,
@@ -10,6 +9,7 @@ import {
 } from "@/lib/bookingStorage";
 import { physicians } from "@/lib/mockData";
 import type { BookingStatus } from "@/lib/types";
+import { AppHeader } from "./AppHeader";
 import { AdminBookingTable } from "./AdminBookingTable";
 
 export function AdminDashboard() {
@@ -56,8 +56,10 @@ export function AdminDashboard() {
 
   return (
     <main className="app-shell">
-      <header className="page-header">
-        <div>
+      <AppHeader currentPage="admin" />
+
+      <section className="page-hero">
+        <div className="page-header">
           <p className="eyebrow">Physician/admin view</p>
           <h1>Upcoming Bookings</h1>
           <p>
@@ -65,10 +67,11 @@ export function AdminDashboard() {
             booking when it should no longer hold a slot.
           </p>
         </div>
-        <Link className="nav-link" href="/">
-          Patient booking
-        </Link>
-      </header>
+        <p className="demo-note">
+          Demo data only: booking records are stored in this browser for local
+          review.
+        </p>
+      </section>
 
       <section className="metric-grid" aria-label="Booking status summary">
         <div className="metric-card">
