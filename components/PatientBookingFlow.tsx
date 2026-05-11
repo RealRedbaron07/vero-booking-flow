@@ -155,8 +155,11 @@ export function PatientBookingFlow() {
       </section>
 
       <div className="flow-grid">
-        <div className="flow-stack">
-          <section className="panel">
+        <section
+          className="booking-workflow"
+          aria-label="Appointment request steps"
+        >
+          <section className="workflow-section">
             <div className="section-heading">
               <p className="step-label">Step 1</p>
               <h2>Choose a physician</h2>
@@ -178,7 +181,7 @@ export function PatientBookingFlow() {
             ) : null}
           </section>
 
-          <section className="panel">
+          <section className="workflow-section">
             <div className="section-heading">
               <p className="step-label">Step 2</p>
               <h2>Select an appointment time</h2>
@@ -202,7 +205,7 @@ export function PatientBookingFlow() {
             ) : null}
           </section>
 
-          <section className="panel">
+          <section className="workflow-section">
             <div className="section-heading">
               <p className="step-label">Step 3</p>
               <h2>Patient details</h2>
@@ -215,7 +218,7 @@ export function PatientBookingFlow() {
               onSubmit={handleSubmit}
             />
           </section>
-        </div>
+        </section>
 
         <aside className="sidebar" aria-label="Booking status">
           {confirmation ? (
